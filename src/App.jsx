@@ -14,7 +14,7 @@ function App() {
 
   const getshows = async () => {
     try {
-      await fetch(`https://api.themoviedb.org/3/search/${select ? select : 'Movie'}?api_key=135eb3a34d882755162302310bfdfc0b&query=${search}`)
+      await fetch(`https://api.themoviedb.org/3/search/${select ? select : 'Movie'}?api_key=135eb3a34d882755162302310bfdfc0b`)
         .then(res => res.json())
         .then(data => setData(data.results))
     }
@@ -43,7 +43,7 @@ function App() {
         src={`https://image.tmdb.org/t/p/w500/${source.poster_path}`} 
         alt={source.title} />
       </>
-        
+ 
       ))}
     </div>
 
