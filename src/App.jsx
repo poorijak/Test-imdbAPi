@@ -14,7 +14,7 @@ function App() {
 
   const getshows = async () => {
     try {
-      await fetch('https://api.themoviedb.org/3/discover/movie?api_key=135eb3a34d882755162302310bfdfc0b')
+      await fetch(`https://api.themoviedb.org/3/discover/${select}?api_key=135eb3a34d882755162302310bfdfc0b`)
         .then(res => res.json())
         .then(data => setData(data.results))
     }
